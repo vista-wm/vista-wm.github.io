@@ -1,0 +1,153 @@
+/* videoImageSync.css - 美化版样式（图片4:3+间距不影响高度） */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 页面基础样式：柔和背景+全局字体优化 */
+body {
+    padding: 30px 20px;
+    font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.5;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+}
+
+.video-image-group-container {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.video-image-single-group {
+    flex: 1;
+    min-width: 420px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-image-single-group:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 核心修正：图片容器仅承载布局，高度由图片自身4:3决定 */
+.image-container {
+    display: flex;
+    gap: 12px; /* 仅作为图片间空隙，不影响比例 */
+    margin-bottom: 16px;
+    width: 100%; /* 总宽=视频宽度 */
+    /* 取消padding-top，高度由子元素决定 */
+}
+
+/* 单个图片项：严格4:3比例，平分宽度（扣除间距） */
+.image-item {
+    flex: 1; /* 平分剩余宽度（自动扣除gap） */
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    background-color: #f0f2f5;
+    border: 1px solid #e5e7eb;
+    /* 4:3比例核心：高度=自身宽度×3/4 */
+    aspect-ratio: 4 / 3; /* 直接指定宽高比，最精准！ */
+}
+
+/* 图片样式：填满4:3容器，无变形 */
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 按4:3填充，裁剪超出部分（无变形） */
+    /* 可选：object-fit: contain; 完整显示图片，少量留白 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    animation: imgFadeIn 0.6s ease;
+}
+
+.image-item img.fade-out {
+    opacity: 0;
+}
+
+/* 视频容器：宽度和图片容器完全一致 */
+.video-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #000;
+    cursor: pointer;
+}
+
+video:hover {
+    filter: brightness(1.02);
+}
+
+@keyframes imgFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 响应式适配：仅调整间距，比例不变 */
+@media (max-width: 900px) {
+    .video-image-single-group {
+        min-width: 100%;
+        padding: 16px;
+    }
+    .image-container {
+        gap: 8px; /* 小屏缩小间距，比例仍为4:3 */
+    }
+    .page-title {
+        font-size: 20px;
+    }
+}
+
+/* 加载占位动画 */
+.image-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    border-top-color: #666;
+    transform: translate(-50%, -50%);
+    animation: spin 1s linear infinite;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.image-item:has(img[src=""]):before,
+.image-item:has(img:not([src])):before {
+    opacity: 1;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
