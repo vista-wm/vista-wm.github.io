@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"/>
     <link rel="stylesheet" href="./static/css/index.css"/>
+    <link rel="stylesheet" href="./static/css/videoImageSync.css">
 
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -35,6 +36,7 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+    <script src="./static/js/videoImageSync.js"></script>
 </head>
 
 <body>
@@ -287,7 +289,7 @@
             <div class="column is-full">
                 <h2 class="title is-3 has-text-centered">Real-World Experiment</h2>
                 <div style="display: flex; justify-content: center">
-                    <div style="display: flex; justify-content: center">
+                    <div style="width: 80%; height: auto; margin: 1%">
                         <img src="./static/images/real_illustrate_single_col.jpg" alt="real_illustrate_single_col"
                              class="image is-fullwidth"/>
                     </div>
@@ -327,18 +329,161 @@
                     improvements.
                 </p>
                 <div style="display: flex; justify-content: center">
-                    <div style="width: 30%; height: auto; margin: 1%">
+                    <div style="width: 50%; height: auto; margin: 1%">
                         <p class="content has-text-centered mb-1"
-                           style="font-style: normal; font-weight: bold; color: black">performance</p>
+                           style="font-style: normal; font-weight: bold; color: black">Performance</p>
                         <img src="./static/images/mixture_task_result.jpg" alt="Widowx_zeroshot"
-                             style="object-fit: fill; border: 1.5px solid #d3d3d3"/>
+                             style="object-fit: fill;"/>
                     </div>
 
-                    <div style="width: 70%; height: auto; margin: 1%">
-                        <p class="content has-text-centered mb-1"
-                           style="font-style: normal; font-weight: bold; color: black">execution comparison</p>
-                        <img src="./static/images/case_compare.jpg" alt="Widowx_zeroshot"
-                             style="object-fit: fill; border: 1.5px solid #d3d3d3"/>
+<!--                    <div style="width: 70%; height: auto; margin: 1%">-->
+<!--                        <p class="content has-text-centered mb-1"-->
+<!--                           style="font-style: normal; font-weight: bold; color: black">execution comparison</p>-->
+<!--                        <img src="./static/images/case_compare.jpg" alt="Widowx_zeroshot"-->
+<!--                             style="object-fit: fill;"/>-->
+<!--                    </div>-->
+                </div>
+
+<!--                <h3 class="title is-4 has-text-centered">Novel Scenarios Video</h3>-->
+
+<!--                <h3 class="title is-4 has-text-centered">grid cloth</h3>-->
+                <div class="video-image-group-container">
+                    <!-- 第一组：视频1 + 图片组1 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the carrot on the plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="grid_case_0_left">
+                                <img src="static/videos/novel_scenarios/grid/case_0/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="grid_case_0_front">
+                                <img src="static/videos/novel_scenarios/grid/case_0/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="grid_case_0_right">
+                                <img src="static/videos/novel_scenarios/grid/case_0/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="grid_video_0" controls>
+                                <source src="./static/videos/novel_scenarios/grid/case_0/case_0X2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- 第二组：视频2 + 图片组2 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the cucumber on the plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="grid_case_1_left">
+                                <img src="static/videos/novel_scenarios/grid/case_1/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="grid_case_1_front">
+                                <img src="static/videos/novel_scenarios/grid/case_1/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="grid_case_1_right">
+                                <img src="static/videos/novel_scenarios/grid/case_1/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="grid_video_1" controls>
+                                <source src="./static/videos/novel_scenarios/grid/case_1/case_1X2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+<!--                <h3 class="title is-4 has-text-centered">flower cloth</h3>-->
+                <div class="video-image-group-container">
+                    <!-- 第一组：视频1 + 图片组1 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the carrot on the plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="flower_case_0_left">
+                                <img src="static/videos/novel_scenarios/flower/case_0/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="flower_case_0_front">
+                                <img src="static/videos/novel_scenarios/flower/case_0/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="flower_case_0_right">
+                                <img src="static/videos/novel_scenarios/flower/case_0/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="flower_video_0" controls>
+                                <source src="./static/videos/novel_scenarios/flower/case_0/case_0.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- 第二组：视频2 + 图片组2 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the steamed bun on the plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="flower_case_1_left">
+                                <img src="static/videos/novel_scenarios/flower/case_1/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="flower_case_1_front">
+                                <img src="static/videos/novel_scenarios/flower/case_1/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="flower_case_1_right">
+                                <img src="static/videos/novel_scenarios/flower/case_1/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="flower_video_1" controls>
+                                <source src="./static/videos/novel_scenarios/flower/case_1/case_1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+<!--                <h3 class="title is-4 has-text-centered">food cloth</h3>-->
+                <div class="video-image-group-container">
+                    <!-- 第一组：视频1 + 图片组1 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the bread on the plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="food_case_0_left">
+                                <img src="static/videos/novel_scenarios/food/case_0/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="food_case_0_front">
+                                <img src="static/videos/novel_scenarios/food/case_0/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="food_case_0_right">
+                                <img src="static/videos/novel_scenarios/food/case_0/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="food_video_0" controls>
+                                <source src="./static/videos/novel_scenarios/food/case_0/case_0X2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- 第二组：视频2 + 图片组2 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the soda water bottle on the plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="food_case_1_left">
+                                <img src="static/videos/novel_scenarios/food/case_1/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="food_case_1_front">
+                                <img src="static/videos/novel_scenarios/food/case_1/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="food_case_1_right">
+                                <img src="static/videos/novel_scenarios/food/case_1/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="food_video_1" controls>
+                                <source src="./static/videos/novel_scenarios/food/case_1/case_1X2.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                 </div>
 
@@ -350,22 +495,160 @@
             <div class="column content">
                 <h3 class="title is-4" style="text-align: center">Emerging capability</h3>
                 <h4 class="title is-5 has-text-centered">Compositional tasks</h4>
-                <div style="display: flex; justify-content: center">
-                    <img src="./static/images/supp_emerging_execute_comp.jpg" alt="case_compare"
-                         class="image is-fullwidth"/>
+<!--                <div style="display: flex; justify-content: center">-->
+<!--                    <img src="./static/images/supp_emerging_execute_comp.jpg" alt="case_compare"-->
+<!--                         class="image is-fullwidth"/>-->
+<!--                </div>-->
+
+                <div class="video-image-group-container">
+                    <!-- 第一组：视频1 + 图片组1 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the milk and cola on the plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="comp_case_0_left">
+                                <img src="static/videos/comp_task/case_0/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="comp_case_0_front">
+                                <img src="static/videos/comp_task/case_0/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="comp_case_0_right">
+                                <img src="static/videos/comp_task/case_0/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="comp_video_0" controls>
+                                <source src="./static/videos/comp_task/case_0/case_0.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- 第二组：视频2 + 图片组2 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the croissant and carrot on the plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="comp_case_1_left">
+                                <img src="static/videos/comp_task/case_1/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="comp_case_1_front">
+                                <img src="static/videos/comp_task/case_1/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="comp_case_1_right">
+                                <img src="static/videos/comp_task/case_1/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="comp_video_1" controls>
+                                <source src="./static/videos/comp_task/case_1/case_1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
                 </div>
 
 
                 <h4 class="title is-5 has-text-centered">spatial understanding tasks</h4>
-                <div style="display: flex; justify-content: center">
-                    <img src="./static/images/supp_emerging_execute_spatial.jpg" alt="case_compare"
-                         class="image is-fullwidth"/>
+<!--                <div style="display: flex; justify-content: center">-->
+<!--                    <img src="./static/images/supp_emerging_execute_spatial.jpg" alt="case_compare"-->
+<!--                         class="image is-fullwidth"/>-->
+<!--                </div>-->
+
+                <div class="video-image-group-container">
+                    <!-- 第一组：视频1 + 图片组1 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the steamed bun on the left plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="spatial_case_0_left">
+                                <img src="static/videos/spatial_task/case_0/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="spatial_case_0_front">
+                                <img src="static/videos/spatial_task/case_0/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="spatial_case_0_right">
+                                <img src="static/videos/spatial_task/case_0/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="spatial_video_0" controls>
+                                <source src="./static/videos/spatial_task/case_0/case_0.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- 第二组：视频2 + 图片组2 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the steamed bun on the right plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="spatial_case_1_left">
+                                <img src="static/videos/spatial_task/case_1/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="spatial_case_1_front">
+                                <img src="static/videos/spatial_task/case_1/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="spatial_case_1_right">
+                                <img src="static/videos/spatial_task/case_1/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="spatial_video_1" controls>
+                                <source src="./static/videos/spatial_task/case_1/case_1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
                 </div>
 
                 <h4 class="title is-5 has-text-centered">semantic understanding tasks</h4>
-                <div style="display: flex; justify-content: center">
-                    <img src="./static/images/supp_emerging_execute_semantic.jpg" alt="case_compare"
-                         class="image is-fullwidth"/>
+<!--                <div style="display: flex; justify-content: center">-->
+<!--                    <img src="./static/images/supp_emerging_execute_semantic.jpg" alt="case_compare"-->
+<!--                         class="image is-fullwidth"/>-->
+<!--                </div>-->
+
+                <div class="video-image-group-container">
+                    <!-- 第一组：视频1 + 图片组1 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the steamed bun on the square plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="semantic_case_0_left">
+                                <img src="static/videos/semantic_task/case_0/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="semantic_case_0_front">
+                                <img src="static/videos/semantic_task/case_0/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="semantic_case_0_right">
+                                <img src="static/videos/semantic_task/case_0/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="semantic_video_0" controls>
+                                <source src="./static/videos/semantic_task/case_0/case_0.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- 第二组：视频2 + 图片组2 -->
+                    <div class="video-image-single-group">
+                         <p class="content has-text-centered mb-1"
+                           style="font-style: normal; font-weight: bold; color: black">put the steamed bun on the round plate</p>
+                        <div class="image-container">
+                            <div class="image-item" id="semantic_case_1_left">
+                                <img src="static/videos/semantic_task/case_1/img_left_0.png" alt="图片1-1">
+                            </div>
+                            <div class="image-item" id="semantic_case_1_front">
+                                <img src="static/videos/semantic_task/case_1/img_front_0.png" alt="图片1-2">
+                            </div>
+                            <div class="image-item" id="semantic_case_1_right">
+                                <img src="static/videos/semantic_task/case_1/img_right_0.png" alt="图片1-3">
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video id="semantic_video_1" controls>
+                                <source src="./static/videos/semantic_task/case_1/case_1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -391,6 +674,339 @@
         );
     }
 </script>
+
+
+<script src="./static/js/videoImageSync.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 初始化第一组：独立配置
+        new VideoImageSync({
+            videoId: 'grid_video_0',
+            imageIds: ['grid_case_0_left', 'grid_case_0_front', 'grid_case_0_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/novel_scenarios/grid/case_0/img_left_0.png',
+                        'static/videos/novel_scenarios/grid/case_0/img_front_0.png',
+                        'static/videos/novel_scenarios/grid/case_0/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 16, images: [
+                        'static/videos/novel_scenarios/grid/case_0/img_left_1.png',
+                        'static/videos/novel_scenarios/grid/case_0/img_front_1.png',
+                        'static/videos/novel_scenarios/grid/case_0/img_right_1.png'
+                    ]
+                }
+            ]
+        });
+
+        new VideoImageSync({
+            videoId: 'grid_video_1',
+            imageIds: ['grid_case_1_left', 'grid_case_1_front', 'grid_case_1_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/novel_scenarios/grid/case_1/img_left_0.png',
+                        'static/videos/novel_scenarios/grid/case_1/img_front_0.png',
+                        'static/videos/novel_scenarios/grid/case_1/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 12, images: [
+                        'static/videos/novel_scenarios/grid/case_1/img_left_1.png',
+                        'static/videos/novel_scenarios/grid/case_1/img_front_1.png',
+                        'static/videos/novel_scenarios/grid/case_1/img_right_1.png'
+                    ]
+                }
+            ]
+        });
+
+        new VideoImageSync({
+            videoId: 'flower_video_0',
+            imageIds: ['flower_case_0_left', 'flower_case_0_front', 'flower_case_0_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/novel_scenarios/flower/case_0/img_left_0.png',
+                        'static/videos/novel_scenarios/flower/case_0/img_front_0.png',
+                        'static/videos/novel_scenarios/flower/case_0/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 12, images: [
+                        'static/videos/novel_scenarios/flower/case_0/img_left_1.png',
+                        'static/videos/novel_scenarios/flower/case_0/img_front_1.png',
+                        'static/videos/novel_scenarios/flower/case_0/img_right_1.png'
+                    ]
+                }
+            ]
+        });
+
+        new VideoImageSync({
+            videoId: 'flower_video_1',
+            imageIds: ['flower_case_1_left', 'flower_case_1_front', 'flower_case_1_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/novel_scenarios/flower/case_1/img_left_0.png',
+                        'static/videos/novel_scenarios/flower/case_1/img_front_0.png',
+                        'static/videos/novel_scenarios/flower/case_1/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 12, images: [
+                        'static/videos/novel_scenarios/flower/case_1/img_left_1.png',
+                        'static/videos/novel_scenarios/flower/case_1/img_front_1.png',
+                        'static/videos/novel_scenarios/flower/case_1/img_right_1.png'
+                    ]
+                }
+            ]
+        });
+
+        new VideoImageSync({
+            videoId: 'food_video_0',
+            imageIds: ['food_case_0_left', 'food_case_0_front', 'food_case_0_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/novel_scenarios/food/case_0/img_left_0.png',
+                        'static/videos/novel_scenarios/food/case_0/img_front_0.png',
+                        'static/videos/novel_scenarios/food/case_0/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 12, images: [
+                        'static/videos/novel_scenarios/food/case_0/img_left_1.png',
+                        'static/videos/novel_scenarios/food/case_0/img_front_1.png',
+                        'static/videos/novel_scenarios/food/case_0/img_right_1.png'
+                    ]
+                }
+            ]
+        });
+
+        new VideoImageSync({
+            videoId: 'food_video_1',
+            imageIds: ['food_case_1_left', 'food_case_1_front', 'food_case_1_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/novel_scenarios/food/case_1/img_left_0.png',
+                        'static/videos/novel_scenarios/food/case_1/img_front_0.png',
+                        'static/videos/novel_scenarios/food/case_1/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 14, images: [
+                        'static/videos/novel_scenarios/food/case_1/img_left_1.png',
+                        'static/videos/novel_scenarios/food/case_1/img_front_1.png',
+                        'static/videos/novel_scenarios/food/case_1/img_right_1.png'
+                    ]
+                }
+            ]
+        });
+
+        new VideoImageSync({
+            videoId: 'spatial_video_0',
+            imageIds: ['spatial_case_0_left', 'spatial_case_0_front', 'spatial_case_0_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/spatial_task/case_0/img_left_0.png',
+                        'static/videos/spatial_task/case_0/img_front_0.png',
+                        'static/videos/spatial_task/case_0/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 14, images: [
+                        'static/videos/spatial_task/case_0/img_left_1.png',
+                        'static/videos/spatial_task/case_0/img_front_1.png',
+                        'static/videos/spatial_task/case_0/img_right_1.png'
+                    ]
+                }
+            ]
+        });
+
+        new VideoImageSync({
+            videoId: 'spatial_video_1',
+            imageIds: ['spatial_case_1_left', 'spatial_case_1_front', 'spatial_case_1_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/spatial_task/case_1/img_left_0.png',
+                        'static/videos/spatial_task/case_1/img_front_0.png',
+                        'static/videos/spatial_task/case_1/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 14, images: [
+                        'static/videos/spatial_task/case_1/img_left_1.png',
+                        'static/videos/spatial_task/case_1/img_front_1.png',
+                        'static/videos/spatial_task/case_1/img_right_1.png'
+                    ]
+                }
+            ]
+        });
+
+        new VideoImageSync({
+            videoId: 'semantic_video_0',
+            imageIds: ['semantic_case_0_left', 'semantic_case_0_front', 'semantic_case_0_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/semantic_task/case_0/img_left_0.png',
+                        'static/videos/semantic_task/case_0/img_front_0.png',
+                        'static/videos/semantic_task/case_0/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 16, images: [
+                        'static/videos/semantic_task/case_0/img_left_1.png',
+                        'static/videos/semantic_task/case_0/img_front_1.png',
+                        'static/videos/semantic_task/case_0/img_right_1.png'
+                    ]
+                }
+            ]
+        });
+
+        new VideoImageSync({
+            videoId: 'semantic_video_1',
+            imageIds: ['semantic_case_1_left', 'semantic_case_1_front', 'semantic_case_1_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/semantic_task/case_1/img_left_0.png',
+                        'static/videos/semantic_task/case_1/img_front_0.png',
+                        'static/videos/semantic_task/case_1/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 14, images: [
+                        'static/videos/semantic_task/case_1/img_left_1.png',
+                        'static/videos/semantic_task/case_1/img_front_1.png',
+                        'static/videos/semantic_task/case_1/img_right_1.png'
+                    ]
+                }
+            ]
+        });
+
+        new VideoImageSync({
+            videoId: 'comp_video_0',
+            imageIds: ['comp_case_0_left', 'comp_case_0_front', 'comp_case_0_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/comp_task/case_0/img_left_0.png',
+                        'static/videos/comp_task/case_0/img_front_0.png',
+                        'static/videos/comp_task/case_0/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 12, images: [
+                        'static/videos/comp_task/case_0/img_left_1.png',
+                        'static/videos/comp_task/case_0/img_front_1.png',
+                        'static/videos/comp_task/case_0/img_right_1.png'
+                    ]
+                },
+                {
+                    time: 24, images: [
+                        'static/videos/comp_task/case_0/img_left_2.png',
+                        'static/videos/comp_task/case_0/img_front_2.png',
+                        'static/videos/comp_task/case_0/img_right_2.png'
+                    ]
+                },
+                {
+                    time: 43, images: [
+                        'static/videos/comp_task/case_0/img_left_3.png',
+                        'static/videos/comp_task/case_0/img_front_3.png',
+                        'static/videos/comp_task/case_0/img_right_3.png'
+                    ]
+                },
+                {
+                    time: 58, images: [
+                        'static/videos/comp_task/case_0/img_left_4.png',
+                        'static/videos/comp_task/case_0/img_front_4.png',
+                        'static/videos/comp_task/case_0/img_right_4.png'
+                    ]
+                },
+            ]
+        });
+
+
+        new VideoImageSync({
+            videoId: 'comp_video_1',
+            imageIds: ['comp_case_1_left', 'comp_case_1_front', 'comp_case_1_right'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/comp_task/case_1/img_left_0.png',
+                        'static/videos/comp_task/case_1/img_front_0.png',
+                        'static/videos/comp_task/case_1/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 12, images: [
+                        'static/videos/comp_task/case_1/img_left_1.png',
+                        'static/videos/comp_task/case_1/img_front_1.png',
+                        'static/videos/comp_task/case_1/img_right_1.png'
+                    ]
+                },
+                {
+                    time: 27, images: [
+                        'static/videos/comp_task/case_1/img_left_2.png',
+                        'static/videos/comp_task/case_1/img_front_2.png',
+                        'static/videos/comp_task/case_1/img_right_2.png'
+                    ]
+                },
+                {
+                    time: 40, images: [
+                        'static/videos/comp_task/case_1/img_left_3.png',
+                        'static/videos/comp_task/case_1/img_front_3.png',
+                        'static/videos/comp_task/case_1/img_right_3.png'
+                    ]
+                },
+                {
+                    time: 52, images: [
+                        'static/videos/comp_task/case_1/img_left_4.png',
+                        'static/videos/comp_task/case_1/img_front_4.png',
+                        'static/videos/comp_task/case_1/img_right_4.png'
+                    ]
+                },
+            ]
+        });
+
+
+        // 初始化第二组：独立配置（可换不同的图片/视频路径）
+        new VideoImageSync({
+            videoId: 'mainVideo2',
+            imageIds: ['img2-1', 'img2-2', 'img2-3'],
+            switchConfigs: [
+                {
+                    time: 0, images: [
+                        'static/videos/spatial_task/case_0/img_left_0.png',
+                        'static/videos/spatial_task/case_0/img_front_0.png',
+                        'static/videos/spatial_task/case_0/img_right_0.png'
+                    ]
+                },
+                {
+                    time: 12, images: [
+                        'static/videos/spatial_task/case_0/img_left_1.png',
+                        'static/videos/spatial_task/case_0/img_front_1.png',
+                        'static/videos/spatial_task/case_0/img_right_1.png'
+                    ]
+                },
+                {
+                    time: 36, images: [
+                        'static/videos/spatial_task/case_0/img_left_2.png',
+                        'static/videos/spatial_task/case_0/img_front_2.png',
+                        'static/videos/spatial_task/case_0/img_right_2.png'
+                    ]
+                }
+            ]
+        });
+    });
+</script>
+
 
 <footer class="footer">
     <div class="container">
